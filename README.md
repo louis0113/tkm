@@ -4,6 +4,8 @@
 
 This is a simple command-line interface (CLI) task manager written in Go. It allows users to manage their daily tasks quickly and efficiently directly from the terminal. Tasks are stored in a JSON file (`data.json`), making the data portable and easy to read.
 
+---
+
 ## 🚀 How to Use
 
 ### 🛠️ Available Commands
@@ -61,10 +63,24 @@ Here are some examples of how to run the commands:
 
 To install this CLI, you must have **Go** installed on your system.
 
+**One-line installation:**
+
+* **Linux/macOS:**
+    ```sh
+    go install <your_repository_URL>@latest
+    ```
+
+* **Windows:**
+    ```sh
+    go install <your_repository_URL>@latest
+    ```
+
+**Manual Installation:**
+
 1.  Clone the repository to your local machine:
     ```sh
-    git clone <URL_do_seu_repositório>
-    cd <nome_do_seu_repositório>
+    git clone <your_repository_URL>
+    cd <your_repository_name>
     ```
 
 2.  Build the executable file:
