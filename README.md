@@ -67,20 +67,20 @@ To install this CLI, you must have **Go** installed on your system.
 
 * **Linux/macOS:**
     ```sh
-    go install <your_repository_URL>@latest
+    go install github.com/louis0113/tkm@latest
     ```
 
 * **Windows:**
     ```sh
-    go install <your_repository_URL>@latest
+    go install github.com/louis0113/tkm@latest
     ```
 
 **Manual Installation:**
 
 1.  Clone the repository to your local machine:
     ```sh
-    git clone <your_repository_URL>
-    cd <your_repository_name>
+    git clone https://github.com/louis0113/tkm.git
+    cd tkm
     ```
 
 2.  Build the executable file:
