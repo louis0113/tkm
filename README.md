@@ -21,6 +21,42 @@ This is a simple command-line interface (CLI) task manager written in Go. It all
 
 ---
 
+### 🏃 Examples
+
+Here are some examples of how to run the commands:
+
+1.  **Adding a new task:**
+    ```sh
+    tkm add "Study for the Go exam"
+    ```
+
+2.  **Listing all tasks:**
+    ```sh
+    tkm list
+    ```
+
+3.  **Listing only 'todo' tasks:**
+    ```sh
+    tkm list --todo
+    ```
+
+4.  **Marking a task as 'done':**
+    ```sh
+    tkm mark 1 --done
+    ```
+
+5.  **Updating a task's description:**
+    ```sh
+    tkm update 1 "Study Go for the final project"
+    ```
+
+6.  **Deleting a task:**
+    ```sh
+    tkm delete 2
+    ```
+
+---
+
 ## 🔧 Installation
 
 To install this CLI, you must have **Go** installed on your system.
