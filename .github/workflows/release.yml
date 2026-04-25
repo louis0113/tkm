@@ -1,0 +1,44 @@
+name: Build and Release
+on:
+  push:
+    tags:
+      - 'v1.*'
+
+permissions:
+  contents: write
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+  GITHUB_TAG: ${{ github.ref_name }}
+  GITHUB_RELEASE: ${{ github.ref_name }}
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: '24'
+
+    - name: Set up Go
+      uses: actions/setup-go@v6
+      with:
+        go-version: '1.23.2'
+
+    - name: Install dependencies
+      run: go get ./...
+
+    - name: Build
+      run: go build -v -o tkm.sh .
+
+    - name: Release
+      uses: softprops/action-gh-release@v3
+      with:
+        name: $GITHUB_RELEASE
+        tag_name: $GITHUB_TAG
+        draft: false
+        prerelease: false
+        files: ./tkm.sh
