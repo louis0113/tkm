@@ -37,8 +37,8 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v3
       with:
-        name: $GITHUB_RELEASE
-        tag_name: $GITHUB_TAG
+        name: ${{env.GITHUB_RELEASE}}
+        tag_name: ${{env.GITHUB_TAG}}
         draft: false
         prerelease: false
         files: ./tkm.sh
